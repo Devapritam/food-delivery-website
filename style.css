@@ -1,0 +1,257 @@
+/* ------CSS Reset-------- */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ------ CSS Variables ------- */
+:root {
+    --navbar-height: 59px;
+}
+
+/* ------ Navigatiom Bar ------- */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .4;
+}
+
+/* ------ Logo and Image -------- */
+#logo {
+    margin: 3px 14px;
+}
+
+#logo img {
+    height: 60px;
+    margin: 0 6px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* ------- Navigation Bar: List Styling ----------- */
+#navbar ul {
+    display: flex;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1rem;
+}
+
+#navbar ul li a {
+    display: block;
+    padding: 1px 22px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease-in;
+}
+
+#navbar ul li a:hover {
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    color: black;
+    background: white;
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ------- Home Section ---------- */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 472px;
+}
+
+#home::before {
+    content: "";
+    background: url('bg_img.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 85%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Potta One', cursive;
+    font-weight: 600;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-weight: 600;
+}
+
+/* --------- Services Section ----------- */
+#services {
+    margin: 34px;
+    display: flex;
+}
+
+#services .box {
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 23px;
+    background: #fafafa;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+#services .box:hover {
+    transform: translateY(-5px);
+}
+
+#services .box img {
+    height: 160px;
+    display: block;
+    margin: auto;
+}
+
+#services .box p{
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+/* ------ Clients Section ----------------- */
+#client-section {
+    position: relative;
+    /* height: 344px; */
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('bg img 2.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .3;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item {
+    padding: 34px;
+}
+
+#clients img {
+    height: 124px;
+}
+
+
+/* --------- Utility class ------- */
+.center {
+    text-align: center;
+}
+
+.h-primary {
+    font-size: 2.1rem;
+    padding: 12px;
+}
+
+.h-secondary {
+    font-size: 1.7rem;
+    padding: 12px;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    transition:  transform ease 0.4s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    background: rgb(53, 190, 53);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+}
+
+/* ---------- Contact Section ------------- */
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .7;
+    background: url('contact.jpg') no-repeat center center/cover;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input, #contact-box textarea{
+    width: 100%;
+    padding: .5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+    border: 1px solid black;
+}
+
+#contact-box form {
+    width: 50%;
+}
+
+#contact-box label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
